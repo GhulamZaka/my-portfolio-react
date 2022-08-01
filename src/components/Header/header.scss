@@ -1,0 +1,9 @@
+@import "~bootstrap/scss/bootstrap";
+header {
+    background-color: #282c34;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+  }
