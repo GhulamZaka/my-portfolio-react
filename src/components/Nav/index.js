@@ -1,30 +1,53 @@
 import React from "react";
-import "./nav.css";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import { emphasize, withStyles } from "@material-ui/core/styles";
+import Breadcrumbs from "@material-ui/core/Breadcrumbs";
+import Chip from "@material-ui/core/Chip";
+// import HomeIcon from "@material-ui/icons/Home";
+// import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-function Navi() {
+const StyledBreadcrumb = withStyles((theme) => ({
+  root: {
+    backgroundColor: theme.palette.grey[100],
+    height: theme.spacing(3),
+    color: theme.palette.grey[800],
+    fontWeight: theme.typography.fontWeightRegular,
+    "&:hover, &:focus": {
+      backgroundColor: theme.palette.grey[300],
+    },
+    "&:active": {
+      boxShadow: theme.shadows[1],
+      backgroundColor: emphasize(theme.palette.grey[300], 0.12),
+    },
+  },
+}))(Chip); // TypeScript only: need a type cast here because https://github.com/Microsoft/TypeScript/issues/26591
+
+export default function Navi(props) {
   return (
-    <Navbar bg="dark" variant="dark">
-      <Container className="justify-content-end">
-        <Nav>
-          <Nav.Item>
-            <Nav.Link href="/about">About Me</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="/portfolio">Portfolio</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="/contact">Contact</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link href="/resume">Resume</Nav.Link>
-          </Nav.Item>
-        </Nav>
-      </Container>
-    </Navbar>
+    <Breadcrumbs aria-label="breadcrumb">
+      <StyledBreadcrumb
+        component="a"
+        href="about"
+        label="About me"
+        onClick={() => props.setPage("About")}
+      />
+      <StyledBreadcrumb
+        component="a"
+        href="#project"
+        label="Portfolio"
+        onClick={() => props.setPage("Portfolio")}
+      />
+      <StyledBreadcrumb
+        component="a"
+        href="contact"
+        label="#Contact"
+        onClick={() => props.setPage("Contact")}
+      />
+      <StyledBreadcrumb
+        component="a"
+        href="resume"
+        label="Resume"
+        onClick={() => props.setPage("Resume")}
+      />
+    </Breadcrumbs>
   );
 }
-
-export default Navi;
