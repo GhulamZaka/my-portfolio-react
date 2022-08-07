@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import "./App.css";
 
 import About from "./components/About";
@@ -15,25 +14,24 @@ function App() {
     switch (activePage) {
       case "About":
         return <About />;
-
       case "Portfolio":
         return <Project />;
-
       case "Contact":
         return <Contact />;
       case "Resume":
         return <Resume />;
+
       default:
         return <About />;
     }
   }
 
   return (
-    <React.Fragment>
+    <div className="App">
       <Header setPage={active} />
       <main>{display()}</main>
       <Footer />
-    </React.Fragment>
+    </div>
   );
 }
 

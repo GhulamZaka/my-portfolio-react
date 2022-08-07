@@ -1,53 +1,40 @@
 import React from "react";
-import { emphasize, withStyles } from "@material-ui/core/styles";
-import Breadcrumbs from "@material-ui/core/Breadcrumbs";
-import Chip from "@material-ui/core/Chip";
-// import HomeIcon from "@material-ui/icons/Home";
-// import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { Tabs, Tab, makeStyles } from "@material-ui/core";
 
-const StyledBreadcrumb = withStyles((theme) => ({
-  root: {
-    backgroundColor: theme.palette.grey[100],
-    height: theme.spacing(3),
-    color: theme.palette.grey[800],
-    fontWeight: theme.typography.fontWeightRegular,
-    "&:hover, &:focus": {
-      backgroundColor: theme.palette.grey[300],
-    },
-    "&:active": {
-      boxShadow: theme.shadows[1],
-      backgroundColor: emphasize(theme.palette.grey[300], 0.12),
-    },
+const useStyles = makeStyles(() => ({
+  nav: {
+    display: "flex",
+    justifyContent: "space-between",
+
+    textAlign: "left",
+    fontSize: "40px",
   },
-}))(Chip); // TypeScript only: need a type cast here because https://github.com/Microsoft/TypeScript/issues/26591
+}));
 
 export default function Navi(props) {
+  const { nav } = useStyles();
   return (
-    <Breadcrumbs aria-label="breadcrumb">
-      <StyledBreadcrumb
-        component="a"
-        href="about"
-        label="About me"
+    <Tabs align="right">
+      <Tab
+        className={nav}
+        label="About"
         onClick={() => props.setPage("About")}
       />
-      <StyledBreadcrumb
-        component="a"
-        href="#project"
+      <Tab
+        className={nav}
         label="Portfolio"
         onClick={() => props.setPage("Portfolio")}
       />
-      <StyledBreadcrumb
-        component="a"
-        href="contact"
-        label="#Contact"
+      <Tab
+        className={nav}
+        label="Contact"
         onClick={() => props.setPage("Contact")}
       />
-      <StyledBreadcrumb
-        component="a"
-        href="resume"
+      <Tab
+        className={nav}
         label="Resume"
         onClick={() => props.setPage("Resume")}
       />
-    </Breadcrumbs>
+    </Tabs>
   );
 }
