@@ -17,6 +17,7 @@ export default function Header(props) {
           <Nav.Link onClick={() => props.setPage("Contact")}>Contact</Nav.Link>
           <Nav.Link onClick={() => props.setPage("Resume")}>Resume</Nav.Link>
         </Nav>
+        {/* <Navi /> */}
       </Container>
     </Navbar>
   );
