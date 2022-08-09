@@ -1,40 +1,21 @@
-import React from "react";
-import { Tabs, Tab, makeStyles } from "@material-ui/core";
+// import React from "react";
+// import Nav from "react-bootstrap/Nav";
 
-const useStyles = makeStyles(() => ({
-  nav: {
-    display: "flex",
-    justifyContent: "space-between",
-
-    textAlign: "left",
-    fontSize: "40px",
-  },
-}));
-
-export default function Navi(props) {
-  const { nav } = useStyles();
-  return (
-    <Tabs align="right">
-      <Tab
-        className={nav}
-        label="About"
-        onClick={() => props.setPage("About")}
-      />
-      <Tab
-        className={nav}
-        label="Portfolio"
-        onClick={() => props.setPage("Portfolio")}
-      />
-      <Tab
-        className={nav}
-        label="Contact"
-        onClick={() => props.setPage("Contact")}
-      />
-      <Tab
-        className={nav}
-        label="Resume"
-        onClick={() => props.setPage("Resume")}
-      />
-    </Tabs>
-  );
-}
+// export default function Navi() {
+//   return (
+//     <Nav className="justify-content-center" activeKey="/about">
+//       <Nav.Item>
+//         <Nav.Link href="/about">About </Nav.Link>
+//       </Nav.Item>
+//       <Nav.Item>
+//         <Nav.Link eventKey="link-1">Portfolio</Nav.Link>
+//       </Nav.Item>
+//       <Nav.Item>
+//         <Nav.Link eventKey="link-2">Contact</Nav.Link>
+//       </Nav.Item>
+//       <Nav.Item>
+//         <Nav.Link eventKey="link-2">Resume</Nav.Link>
+//       </Nav.Item>
+//     </Nav>
+//   );
+// }

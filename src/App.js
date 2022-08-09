@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+// import React from "react";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import About from "./components/About";
 import Project from "./components/Project";
@@ -29,7 +31,15 @@ function App() {
   return (
     <div className="App">
       <Header setPage={active} />
+      {/* <Header /> */}
       <main>{display()}</main>
+      {/* <main>
+        <About />
+        <Project />
+        <Contact />
+        <Resume />
+      </main> */}
+
       <Footer />
     </div>
   );

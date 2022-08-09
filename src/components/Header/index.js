@@ -1,126 +1,23 @@
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  makeStyles,
-  IconButton,
-  Drawer,
-} from "@material-ui/core";
-import React, { useState, useEffect } from "react";
-import MenuIcon from "@material-ui/icons/Menu";
-import "./header.css";
-import Navi from "../../components/Nav";
-
-const useStyles = makeStyles(() => ({
-  header: {
-    backgroundColor: "primary",
-    paddingRight: "79px",
-    paddingLeft: "118px",
-    height: "300px",
-    justifyContent: "center",
-    "@media (max-width: 900px)": {
-      paddingLeft: 0,
-    },
-  },
-  toolbar: {
-    display: "flex",
-    justifyContent: "space-between",
-  },
-  title: {
-    fontFamily: "Work Sans, sans-serif",
-    fontWeight: 600,
-    color: "#FFFEFE",
-    textAlign: "left",
-    fontSize: "80px",
-  },
-  drawerContainer: {
-    padding: "20px 30px",
-  },
-}));
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+// import Navi from "./components/Nav";
 
 export default function Header(props) {
-  const { header, toolbar, title, drawerContainer } = useStyles();
-  const [state, setState] = useState({
-    mobileView: false,
-  });
-
-  const { mobileView } = state;
-
-  useEffect(() => {
-    const setResponsiveness = () => {
-      return window.innerWidth < 900
-        ? setState((prevState) => ({ ...prevState, mobileView: true }))
-        : setState((prevState) => ({ ...prevState, mobileView: false }));
-    };
-
-    setResponsiveness();
-    window.addEventListener("resize", () => setResponsiveness());
-
-    return () => {
-      window.removeEventListener("resize", () => setResponsiveness());
-    };
-  }, []);
-
-  const displayDesktop = () => {
-    return (
-      <Toolbar className={toolbar}>
-        <Typography variant="h2" component="h1" className={title}>
-          Ghulam Mustafa Zaka
-        </Typography>
-        <Navi setPage={props.setPage} />
-      </Toolbar>
-    );
-  };
-
-  const displayMobile = () => {
-    const [state, setState] = useState({
-      mobileView: false,
-      drawerOpen: false,
-    });
-    const { mobileView, drawerOpen } = state;
-
-    const handleDrawerOpen = () =>
-      setState((prevState) => ({ ...prevState, drawerOpen: true }));
-    const handleDrawerClose = () =>
-      setState((prevState) => ({ ...prevState, drawerOpen: false }));
-
-    return (
-      <Toolbar>
-        <IconButton
-          {...{
-            edge: "start",
-            color: "inherit",
-            "aria-label": "menu",
-            "aria-haspopup": "true",
-            onClick: handleDrawerOpen,
-          }}
-        >
-          <MenuIcon />
-        </IconButton>
-        <Drawer
-          {...{
-            anchor: "left",
-            open: drawerOpen,
-            onClose: handleDrawerClose,
-          }}
-        >
-          <div className={drawerContainer}>
-            <Navi setPage={props.setPage} />
-          </div>
-        </Drawer>
-
-        <Typography variant="h2" component="h1" className={title}>
-          Ghulam Mustafa Zaka
-        </Typography>
-      </Toolbar>
-    );
-  };
-
   return (
-    <header>
-      <AppBar className={header}>
-        {mobileView ? displayMobile() : displayDesktop()}
-      </AppBar>
-    </header>
+    <Navbar bg="primary" variant="dark">
+      <Container>
+        <Navbar.Brand href="#home">Ghulam Mustafa Zaka</Navbar.Brand>
+        <Nav className="justify-content-end">
+          <Nav.Link onClick={() => props.setPage("About")}>About</Nav.Link>
+          <Nav.Link onClick={() => props.setPage("Portfolio")}>
+            Portfolio
+          </Nav.Link>
+          <Nav.Link onClick={() => props.setPage("Contact")}>Contact</Nav.Link>
+          <Nav.Link onClick={() => props.setPage("Resume")}>Resume</Nav.Link>
+        </Nav>
+      </Container>
+    </Navbar>
   );
 }
