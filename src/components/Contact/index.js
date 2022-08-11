@@ -3,6 +3,7 @@ import "./contact.css";
 import { validateEmail } from "../../utils/helpers";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
 
 function Contact() {
   const [formState, setFormState] = useState({
@@ -42,7 +43,7 @@ function Contact() {
     }
   };
   return (
-    <div className="contact">
+    <Container className="contact">
       <h2>Contact</h2>
 
       <Form>
@@ -111,7 +112,7 @@ function Contact() {
           Submit
         </Button>
       </Form>
-    </div>
+    </Container>
   );
 }
 

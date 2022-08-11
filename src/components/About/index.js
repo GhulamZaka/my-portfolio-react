@@ -1,12 +1,15 @@
 import React from "react";
-import img from "../../assets/images/github.png";
+import avatar from "../../assets/images/avatar.jpg";
+import Container from "react-bootstrap/Container";
 import "./about.css";
+import Avatar from "react-avatar";
 
 function About() {
   return (
-    <div className="about">
+    <Container className="about" expand="lg">
       <h2> About me</h2>
-      <img src={img} alt="" />
+      {/* <img src={img} alt="avatar" /> */}
+      <Avatar src={avatar} size="150" round={true} />
 
       <p>
         Front End web developer with a background in administrative and finance
@@ -17,7 +20,7 @@ function About() {
         focused on mobile-first design and development. Built several websites
         individually and as a group project and deployed into GitHub and Heroku.
       </p>
-    </div>
+    </Container>
   );
 }
 

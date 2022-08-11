@@ -31,7 +31,9 @@ function App() {
   return (
     <div>
       <Header setPage={active} />
-      <main className="App">{display()}</main>
+      <main className="App" expand="lg">
+        {display()}
+      </main>
       <Footer />
     </div>
   );

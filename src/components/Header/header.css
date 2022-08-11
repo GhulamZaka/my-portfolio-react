@@ -3,11 +3,13 @@
 }
 
 .text {
-    font-size: x-large;
+    font-size: 20px;
     font-weight: 500;
+   
+   
 }
 
 .title {
-    font-size: 50px;
+    font-size: 25px;
     font-weight: 500;
 }

@@ -1,5 +1,6 @@
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Sink from "../../assets/images/despression-sink.jpg";
 import Trip from "../../assets/images/Dream-Trip.png";
@@ -10,7 +11,7 @@ import Photo from "../../assets/images/photo-port.jpg";
 
 function Project() {
   return (
-    <div>
+    <Container>
       <h2>Projects</h2>
       <Row xs="1" lg={2} className="g-4">
         <Col>
@@ -92,7 +93,7 @@ function Project() {
           </Card>
         </Col>
       </Row>
-    </div>
+    </Container>
   );
 }
 

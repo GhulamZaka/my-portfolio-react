@@ -1,8 +1,9 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
 
 function Resume() {
   return (
-    <div>
+    <Container>
       <h2>Resume </h2>
       <p>
         Download my{" "}
@@ -25,7 +26,7 @@ function Resume() {
         <br />- MySQL, Sequelize <br />- MongoDB, Mongoose <br />- REST <br />-
         GraphQL
       </p>
-    </div>
+    </Container>
   );
 }
 
