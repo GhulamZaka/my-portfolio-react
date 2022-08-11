@@ -1,25 +1,41 @@
-import logo from "./logo.svg";
+import React, { useState } from "react";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+//importing sections from components
+import About from "./components/About";
+import Project from "./components/Project";
+import Contact from "./components/Contact";
+import Resume from "./components/Resume";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+
+export default function App() {
+  const [activePage, active] = useState("About");
+  //rendering different sections while about page is not active
+  function display() {
+    switch (activePage) {
+      case "About":
+        return <About />;
+      case "Portfolio":
+        return <Project />;
+      case "Contact":
+        return <Contact />;
+      case "Resume":
+        return <Resume />;
+
+      default:
+        return <About />;
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header setPage={active} />
+      <main className="App" expand="lg">
+        {display()}
+      </main>
+      <Footer />
     </div>
   );
 }
-
-export default App;
