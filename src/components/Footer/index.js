@@ -8,7 +8,7 @@ import Stack from "../../assets/images/stack-overflow.svg";
 
 export default function Footer() {
   return (
-    <Navbar bg="primary" variant="dark" className="footer">
+    <Navbar variant="dark" className="footer">
       <Container className="justify-content-center">
         <a href="https://github.com/GhulamZaka" className="icons">
           <img src={Github} alt="github" width="35" height="35" />

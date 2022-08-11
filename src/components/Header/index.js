@@ -6,7 +6,7 @@ import "./header.css";
 
 export default function Header(props) {
   return (
-    <Navbar bg="primary" variant="dark" className="head" expand="lg">
+    <Navbar variant="dark" className="head" expand="lg">
       <Container>
         <Navbar.Brand className="title" href="about">
           Ghulam Mustafa Zaka
