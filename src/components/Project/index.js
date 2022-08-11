@@ -9,7 +9,7 @@ import Food from "../../assets/images/food-festival.jpg";
 import Weather from "../../assets/images/weather-forecast.jpg";
 import Photo from "../../assets/images/photo-port.jpg";
 
-function Project() {
+export default function Project() {
   return (
     <Container>
       <h2>Projects</h2>
@@ -96,5 +96,3 @@ function Project() {
     </Container>
   );
 }
-
-export default Project;

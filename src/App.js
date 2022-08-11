@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-// import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+//importing sections from components
 import About from "./components/About";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
@@ -10,8 +10,9 @@ import Resume from "./components/Resume";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
-function App() {
+export default function App() {
   const [activePage, active] = useState("About");
+  //rendering different sections while about page is not active
   function display() {
     switch (activePage) {
       case "About":
@@ -38,5 +39,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

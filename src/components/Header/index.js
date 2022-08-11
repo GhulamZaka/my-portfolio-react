@@ -2,7 +2,6 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-
 import "./header.css";
 
 export default function Header(props) {
@@ -19,7 +18,7 @@ export default function Header(props) {
             style={{ maxHeight: "120px" }}
             navbarScroll
           >
-            <Nav.Link onClick={() => props.setPage("About")}>About</Nav.Link>
+            <Nav.Link onClick={() => props.setPage("About")}>About Me</Nav.Link>
             <Nav.Link onClick={() => props.setPage("Portfolio")}>
               Portfolio
             </Nav.Link>

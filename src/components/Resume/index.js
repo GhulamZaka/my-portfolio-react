@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 
-function Resume() {
+export default function Resume() {
   return (
     <Container>
       <h2>Resume </h2>
@@ -29,5 +29,3 @@ function Resume() {
     </Container>
   );
 }
-
-export default Resume;

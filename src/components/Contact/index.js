@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./contact.css";
 import { validateEmail } from "../../utils/helpers";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
+import "./contact.css";
 
-function Contact() {
+export default function Contact() {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -42,6 +42,7 @@ function Contact() {
       console.log("Handle Form", formState);
     }
   };
+
   return (
     <Container className="contact">
       <h2>Contact</h2>
@@ -60,9 +61,6 @@ function Contact() {
             defaultValue={name}
             onBlur={handleChange}
           />
-          {/* <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text> */}
         </Form.Group>
 
         <Form.Group
@@ -78,9 +76,6 @@ function Contact() {
             defaultValue={email}
             onBlur={handleChange}
           />
-          {/* <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text> */}
         </Form.Group>
 
         <Form.Group
@@ -97,9 +92,6 @@ function Contact() {
             defaultValue={message}
             onBlur={handleChange}
           />
-          {/* <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text> */}
         </Form.Group>
 
         {errorMessage && (
@@ -115,5 +107,3 @@ function Contact() {
     </Container>
   );
 }
-
-export default Contact;
