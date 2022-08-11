@@ -29,17 +29,9 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div>
       <Header setPage={active} />
-      {/* <Header /> */}
-      <main>{display()}</main>
-      {/* <main>
-        <About />
-        <Project />
-        <Contact />
-        <Resume />
-      </main> */}
-
+      <main className="App">{display()}</main>
       <Footer />
     </div>
   );

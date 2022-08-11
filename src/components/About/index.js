@@ -1,11 +1,13 @@
 import React from "react";
-
+import img from "../../assets/images/github.png";
 import "./about.css";
 
 function About() {
   return (
-    <div>
+    <div className="about">
       <h2> About me</h2>
+      <img src={img} alt="" />
+
       <p>
         Front End web developer with a background in administrative and finance
         management. Trained at the University of California Davis Coding
