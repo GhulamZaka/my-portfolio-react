@@ -6,6 +6,8 @@ This is a single-page application portfolio which built using React library. It 
 
 ## Deployed URL
 
+https://GhulamZaka.github.io/my-portfolio-react
+
 ## Github URL
 
 https://github.com/GhulamZaka/my-portfolio-react
