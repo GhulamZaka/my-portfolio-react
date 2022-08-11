@@ -8,7 +8,7 @@ function About() {
   return (
     <Container className="about" expand="lg">
       <h2> About me</h2>
-      {/* <img src={img} alt="avatar" /> */}
+
       <Avatar src={avatar} size="150" round={true} />
 
       <p>

@@ -1,35 +1,31 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import * as Icon from "react-bootstrap-icons";
 import Navbar from "react-bootstrap/Navbar";
-import Row from "react-bootstrap/Row";
 import "./footer.css";
+import Github from "../../assets/images/github1.svg";
+import Linkedin from "../../assets/images/linkedin.svg";
+import Stack from "../../assets/images/stack-overflow.svg";
 
 export default function Footer() {
   return (
     <Navbar bg="primary" variant="dark" className="footer">
       <Container className="justify-content-center">
-        <Navbar.Brand>Footer</Navbar.Brand>
-        <Row>
-          <a href="/">
-            <i class="fa fa-facebook fa-lg text-white mr-md-5 mr-3 fa-2x"></i>
-          </a>
-        </Row>
+        <a href="https://github.com/GhulamZaka" className="icons">
+          <img src={Github} alt="github" width="35" height="35" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/ghulam-zaka-8b6012187/"
+          className="icons"
+        >
+          <img src={Linkedin} alt="github" width="35" height="35" />
+        </a>
+        <a
+          href="https://github.com/GhulamZaka/my-portfolio-react"
+          className="icons"
+        >
+          <img src={Stack} alt="github" width="35" height="35" />
+        </a>
       </Container>
     </Navbar>
-    // <footer class="page-footer">
-    //   <div class="container">
-    //     <div class="row">
-    //       <div class="col-md-12 py-5">
-    //         <div class="flex-center">
-    //           {/* <!-- Facebook --> */}
-    //           <a href="/">
-    //             <i class="fa fa-facebook fa-lg text-white mr-md-5 mr-3 fa-2x"></i>
-    //           </a>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </footer>
   );
 }

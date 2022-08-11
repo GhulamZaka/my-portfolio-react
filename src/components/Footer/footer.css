@@ -4,5 +4,8 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+}
 
+.icons {
+  padding: 0 20px;
 }
