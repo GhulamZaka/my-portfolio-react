@@ -8,7 +8,7 @@ export default function Header(props) {
   return (
     <Navbar variant="dark" className="head" expand="lg">
       <Container>
-        <Navbar.Brand className="title" href="about">
+        <Navbar.Brand className="title" href="about me">
           Ghulam Mustafa Zaka
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
