@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/my-portfolio-react/static/css/main.b07e9faf.css",
-    "main.js": "/my-portfolio-react/static/js/main.cb003883.js",
+    "main.js": "/my-portfolio-react/static/js/main.a3236128.js",
     "static/js/787.fe039db8.chunk.js": "/my-portfolio-react/static/js/787.fe039db8.chunk.js",
     "static/media/Dream-Trip.png": "/my-portfolio-react/static/media/Dream-Trip.ac1075d64fc09cb838ca.png",
-    "static/media/photo-port.jpg": "/my-portfolio-react/static/media/photo-port.904c5f6839ab25490964.jpg",
     "static/media/despression-sink.jpg": "/my-portfolio-react/static/media/despression-sink.910663d9ed70046ae2c7.jpg",
     "static/media/run-buddy.jpg": "/my-portfolio-react/static/media/run-buddy.ee263591f8e97a3b0f40.jpg",
     "static/media/food-festival.jpg": "/my-portfolio-react/static/media/food-festival.5ea206183ef3945fbc60.jpg",
     "static/media/weather-forecast.jpg": "/my-portfolio-react/static/media/weather-forecast.eef2d1274dbaa9fe7a9d.jpg",
     "static/media/avatar.jpg": "/my-portfolio-react/static/media/avatar.77e6c88591ed82e10149.jpg",
+    "static/media/last-project.png": "/my-portfolio-react/static/media/last-project.944f1885d09fb4cd15bb.png",
     "index.html": "/my-portfolio-react/index.html",
     "static/media/github1.svg": "/my-portfolio-react/static/media/github1.22e65707326e3e1e37afd21c5334995a.svg",
     "static/media/linkedin.svg": "/my-portfolio-react/static/media/linkedin.2eda7bddaacee15c44494bb63ca94165.svg",
     "static/media/stack-overflow.svg": "/my-portfolio-react/static/media/stack-overflow.2b16c13845003b1854aa013e242d8570.svg",
     "main.b07e9faf.css.map": "/my-portfolio-react/static/css/main.b07e9faf.css.map",
-    "main.cb003883.js.map": "/my-portfolio-react/static/js/main.cb003883.js.map",
+    "main.a3236128.js.map": "/my-portfolio-react/static/js/main.a3236128.js.map",
     "787.fe039db8.chunk.js.map": "/my-portfolio-react/static/js/787.fe039db8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b07e9faf.css",
-    "static/js/main.cb003883.js"
+    "static/js/main.a3236128.js"
   ]
 }
