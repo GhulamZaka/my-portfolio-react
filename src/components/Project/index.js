@@ -7,7 +7,7 @@ import Trip from "../../assets/images/Dream-Trip.png";
 import Run from "../../assets/images/run-buddy.jpg";
 import Food from "../../assets/images/food-festival.jpg";
 import Weather from "../../assets/images/weather-forecast.jpg";
-import Photo from "../../assets/images/photo-port.jpg";
+import Photo from "../../assets/images/last-project.png";
 
 export default function Project() {
   return (
@@ -83,10 +83,10 @@ export default function Project() {
           <Card>
             <Card.Img variant="top" src={Photo} />
             <Card.Body>
-              <Card.Link href="https://ghulamzaka.github.io/photo-port/#about">
-                Photo Port
+              <Card.Link href="https://tutor-coin.herokuapp.com/">
+                Tutor Coin
               </Card.Link>
-              <Card.Link href="https://github.com/GhulamZaka/photo-port">
+              <Card.Link href="https://github.com/mpeterson56/Tutor-Coin">
                 Github
               </Card.Link>
             </Card.Body>
